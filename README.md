@@ -1,29 +1,11 @@
-<!--
-*** Thanks for checking out the Best-README-Template. If you have a suggestion
-*** that would make this better, please fork the repo and create a pull request
-*** or simply open an issue with the tag "enhancement".
-*** Thanks again! Now go create something AMAZING! :D
--->
-
-
-
-<!-- PROJECT SHIELDS -->
-<!--
-*** I'm using markdown "reference style" links for readability.
-*** Reference links are enclosed in brackets [ ] instead of parentheses ( ).
-*** See the bottom of this document for the declaration of the reference variables
-*** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
-*** https://www.markdownguide.org/basic-syntax/#reference-style-links
--->
-
-
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
-   <a href="https://github.com/sonups/cypress-test-docker">
+   <a href="https://github.com/sonups/cypress-todos-automated-test">
    <img src="https://hackernoon.com/hn-images/1*IrV85j4bpBjZocD5jVnCHQ.jpeg" alt="Logo" width="300" height="150">
       <img src="https://images.adamtheautomator.com/fetch/w_2000,f_auto,q_auto:420,fl_strip_profile,c_fit/https://adamtheautomator.com/wp-content/uploads/2019/12/jenkins-powershell.png" alt="Logo" width="150" height="150">
    </a>
+   </p>
 <h3 align="center">Cypress Todos Test Automation with Docker & Jenkins</h3>
 <p align="center">
    Cypress test automation using docker and Jenkins. Run all your UI End to end tests silently 
@@ -59,9 +41,8 @@ npm run lint
 | ------------- | ------------- |
 | npm run cy-open  | Open cypress workbook  |
 | npm run cy-run-headless  | Run tests in headless mode  |
-| npm run cy-run-chrome  | Run tests in headless mode  |
-| npm run cy-run-firefox  | Run tests in headless mode  |
-| npm run cucumber | Run tests in headless mode  |
+| npm run cy-run-chrome  | Run tests in Chrome  |
+| npm run cy-run-firefox  | Run tests in Firefox  |
 | npm run cucumber-run-specific | Run specific tests by @tags  |
 
 
@@ -89,7 +70,9 @@ For report Generation:-
  
 2. Execute the tests by:- (ensure docker is installed in your host machine)
    ```sh
-	docker run --interactive --name cypress-todos-automated-tests sps89/cypress-todosautomated-tests .
+	docker kill cypress-todos-automated-tests
+	docker rm cypress-todos-automated-tests
+	docker run --interactive --name cypress-todos-automated-tests sps89/cypress-todo-automated-tests
    ```
  
    
@@ -106,6 +89,24 @@ For report Generation:-
    docker rm jenkins-gelato 
    docker run -d --shm-size=2048m --name jenkins-gelato -v /var/run/docker.sock:/var/run/docker.sock -p 8089:8080 -p 50000:50000 sps89/jenkins-gelato
    ```
+2. Open the Jenkins dashboard using link http://localhost:8089   (may be have to wait for 1-2 minutes for the docker container to spin up )
+
+<p align="center">
+   <img src="https://raw.githubusercontent.com/sonups/cypress-todos-automated-test/master/pictures/jenkins.png" alt="Logo" width="600" height="200">
+   </p>
+   
+
+There are 2 jobs to be executed here:
+
+<span style="color:blue">To build docker tests run the job</span>.
+<span style="color:red">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;dockerize-cypress-test-automation</span>.
+
+<span style="color:blue">To build docker tests run the job</span>.
+<span style="color:red">&nbsp;&nbsp;&nbsp;&nbsp;run-cypress-todos-automated-tests</span>.
+
+<p align="center">
+   <img src="https://raw.githubusercontent.com/sonups/cypress-todos-automated-test/master/pictures/jenkins-console-output.png" alt="Logo" width="600" height="200">
+   </p>
 
 <!-- EXECUTING THE TESTS IN AZURE CLOUD -->
 ## 4. Executing the tests in Azure Cloud
