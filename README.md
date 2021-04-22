@@ -3,7 +3,7 @@
 <p align="center">
    <a href="https://github.com/sonups/cypress-todos-automated-test">
    <img src="https://hackernoon.com/hn-images/1*IrV85j4bpBjZocD5jVnCHQ.jpeg" alt="Logo" width="300" height="150">
-      <img src="https://images.adamtheautomator.com/fetch/w_2000,f_auto,q_auto:420,fl_strip_profile,c_fit/https://adamtheautomator.com/wp-content/uploads/2019/12/jenkins-powershell.png" alt="Logo" width="150" height="150">
+      <img src="https://adamtheautomator.com/wp-content/uploads/2019/12/jenkins-powershell.png" alt="Logo" width="150" height="150">
    </a>
    </p>
 <h3 align="center">Cypress Todos Test Automation with Docker & Jenkins</h3>
