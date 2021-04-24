@@ -5,9 +5,6 @@ const listItem = 'ul.todo-list>li';
 const destroyButton = 'button.destroy';
 const markCompletedInput = 'input.toggle';
 
-
-
-
 export const todoItemObjects = {
   verifyStatusOfTodoItemAsCompleted(item) {
     cy.get(listItem).each(($el,
@@ -87,3 +84,11 @@ export const todoItemObjects = {
   },
 
 };
+
+let testdata = {};
+before(function () {
+  cy.fixture('testdata').then(function (data) {
+    testdata.jsonplaceholder_url = data.jsonplaceholder_url;
+  })
+})
+

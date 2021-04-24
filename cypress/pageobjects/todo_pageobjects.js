@@ -1,6 +1,4 @@
 //import {selectDropdownValue, verifydescendingOrderOfMovieRating} from '../utils/helper';
-import { todoItemObjects } from '../pageobjects/todo_entry_item_pageobjects'
-
 const addNewToDoInputText = 'input.new-todo';
 const markAllAsCompleted = 'label[for=\'toggle-all\']';
 const toDoCount = 'span.todo-count';
@@ -24,9 +22,10 @@ const clearCompletedLink = 'button.clear-completed';
 
 
 //     });
+
 export const todoObjects = {
   addMultipleTodosFromRESTService(number) {
-    cy.request('http://localhost:3000/todos/')
+    cy.request(testdata.jsonplaceholder_url + '/todos/')
       .then((resp) => {
         let counter = 1
         let responseBody = resp.body
@@ -44,7 +43,7 @@ export const todoObjects = {
       })
   },
   changeTodoStatusOfMUltipleItemsBasedonValuesFromREST(number) {
-    cy.request('http://localhost:3000/todos/')
+    cy.request(testdata.jsonplaceholder_url+'/todos/')
       .then((resp) => {
         let counter = 1
         let responseBody = resp.body
@@ -55,14 +54,14 @@ export const todoObjects = {
           let userId = item.userId
           let completedStatus = item.completed
           if (completedStatus == true) {
-              todoItemObjects.markItemAsCompleted(title)
+            todoItemObjects.markItemAsCompleted(title)
           }
           cy.log("changed status of todo item: " + counter++)
-      });
+        });
       })
   },
   verifyTodoStatusOfMUltipleItemsBasedonValuesFromREST(number) {
-    cy.request('http://localhost:3000/todos/')
+    cy.request(testdata.jsonplaceholder_url+'/todos/')
       .then((resp) => {
         let counter = 1
         let responseBody = resp.body
@@ -73,14 +72,14 @@ export const todoObjects = {
           let userId = item.userId
           let completedStatus = item.completed
           if (completedStatus == true) {
-              todoItemObjects.verifyStatusOfTodoItemAsCompleted(title)
+            todoItemObjects.verifyStatusOfTodoItemAsCompleted(title)
           }
           else {
-              todoItemObjects.verifyStatusOfTodoItemAsNotCompleted(title)
+            todoItemObjects.verifyStatusOfTodoItemAsNotCompleted(title)
           }
           cy.log("verified status of todo item: " + counter++)
 
-      });
+        });
       })
   },
   addNewToDoEntry(text) {
@@ -116,3 +115,12 @@ export const todoObjects = {
 
 
 };
+
+
+let testdata = {};
+before(function () {
+  cy.fixture('testdata').then(function (data) {
+    testdata.jsonplaceholder_url = data.jsonplaceholder_url;
+  })
+})
+
