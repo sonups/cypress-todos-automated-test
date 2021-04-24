@@ -111,7 +111,7 @@ b) mocha-awesome
    ```
 3. Execute All tests
    ```sh
-	docker run --interactive --name cypress-todos-automated-tests sps89/cypress-todo-automated-tests
+	docker run --interactive --name cypress-todos-automated-tests sps89/cypress-todos-automated-tests
    ```
 
 <!-- Execution from Jenkins hosted from docker container -->
