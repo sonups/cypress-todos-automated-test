@@ -104,7 +104,7 @@ b) mocha-awesome
    cd cypress-todos-automated-test
    docker build -t sps89/cypress-todos-automated-tests .
    ```
-2. (Optional) Ensure the existing running containers are killed and removed  - **(ignore errors)**
+2. (Required only when there is already a container running with same name) Ensure the existing running containers are killed and removed  - **(ignore errors)**
    ```sh
 	docker kill cypress-todos-automated-tests
 	docker rm cypress-todos-automated-tests
@@ -136,7 +136,7 @@ Execute the shell script in Linux environment
    docker build -t sps89/jenkins-gelato .
    ```
 ##### 
-2. (Optional) Ensure the existing running containers are killed and removed  - **(ignore errors)**
+2. (Required only when there is already a container running with same name) This ensure the existing running containers are killed and removed  - **(ignore errors)**
    ```sh
    docker kill jenkins-gelato
    docker rm jenkins-gelato 
