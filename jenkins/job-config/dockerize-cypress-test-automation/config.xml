@@ -19,7 +19,7 @@
         stage(&apos;Git Checkout Cypress Todos automation repository&apos;) {
             steps {
                 sh &apos;rm -rf *&apos;
-                git &apos;https://github.com/sonups/cypress-todos-automated-test-private.git&apos;
+                git &apos;https://github.com/sonups/cypress-todos-automated-test.git&apos;
             }
         }
 
