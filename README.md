@@ -104,20 +104,20 @@ b) mocha-awesome
    cd cypress-todos-automated-test
    docker build -t sps89/cypress-todos-automated-tests .
    ```
-2. (Optional) Ensure the existing running containers are killed and removed  - **(ignore errors)**
+2. (Required only when there is already a container running with same name) Ensure the existing running containers are killed and removed  - **(ignore errors)**
    ```sh
 	docker kill cypress-todos-automated-tests
 	docker rm cypress-todos-automated-tests
    ```
 3. Execute All tests
    ```sh
-	docker run --interactive --name cypress-todos-automated-tests sps89/cypress-todo-automated-tests
+	docker run --interactive --name cypress-todos-automated-tests sps89/cypress-todos-automated-tests
    ```
 
 <!-- Execution from Jenkins hosted from docker container -->
 ## 3. Running tests in Jenkins hosted from docker
 ### 3.1 Setting up jenkins
-#### OPTION-1 Running shell script jenkins-run.sh
+#### OPTION-1 Running shell script jenkins-run.sh (In linux)
 
 Execute the shell script in Linux environment
    ```sh
@@ -136,7 +136,7 @@ Execute the shell script in Linux environment
    docker build -t sps89/jenkins-gelato .
    ```
 ##### 
-2. (Optional) Ensure the existing running containers are killed and removed  - **(ignore errors)**
+2. (Required only when there is already a container running with same name) This ensure the existing running containers are killed and removed  - **(ignore errors)**
    ```sh
    docker kill jenkins-gelato
    docker rm jenkins-gelato 
@@ -182,4 +182,5 @@ Sonu Sadasivan - sonu.sadasivan@gmail.com
 LinkedIn - https://www.linkedin.com/in/sonups/
 
 Project Link: [https://github.com/sonups/cypress-test-docker](https://github.com/sonups/cypress-test-docker)
+
 
