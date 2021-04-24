@@ -117,7 +117,7 @@ b) mocha-awesome
 <!-- Execution from Jenkins hosted from docker container -->
 ## 3. Running tests in Jenkins hosted from docker
 ### 3.1 Setting up jenkins
-#### OPTION-1 Running shell script jenkins-run.sh
+#### OPTION-1 Running shell script jenkins-run.sh (In linux)
 
 Execute the shell script in Linux environment
    ```sh
