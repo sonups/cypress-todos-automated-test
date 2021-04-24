@@ -1,7 +1,3 @@
 {
-  "username": "username",
-  "validemail": "testuser007@gmail.com",
-  "password": "Test1234",
-  "invalidemail": "hello@cypress.io"
-  
+  "testdata": "sample_data",
 }
