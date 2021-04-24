@@ -1,11 +1,11 @@
 
 import { Given, When, Then } from 'cypress-cucumber-preprocessor/steps'
-import { todoObjects} from '../../pageobjects/todo_pageobjects'
-import { todoItemObjects} from '../../pageobjects/todo_entry_item_pageobjects'
+import { todoObjects } from '../../pageobjects/todo_pageobjects'
+import { todoItemObjects } from '../../pageobjects/todo_entry_item_pageobjects'
 
 Given('I open todo web application', () => {
     cy.visit("https://todomvc.com/examples/react/#/")
-    })
+})
 
 //     Then I add a new todo entry with text "task one"
 // Then I remove a todo entry with text "task two"
@@ -18,8 +18,9 @@ Given('I open todo web application', () => {
 // Then the Clear completed link should be visible
 // Then the number of todos left should be "4 items left"
 
+
 Then('I add a new todo entry with text {string}', (text) => {
-        todoObjects.addNewToDoEntry(text)
+    todoObjects.addNewToDoEntry(text)
 })
 
 Then('I remove a todo entry with text {string}', (text) => {
@@ -38,6 +39,15 @@ Then('I mark all todo entries as completed', () => {
 Then('the number of todos left should be {string}', (text) => {
     todoObjects.verifyNumberOfTodos(text)
 })
+
+Then('Verify the todo item {string} to be displayed as completed', (item) => {
+    todoItemObjects.verifyStatusOfTodoItemAsCompleted(item, status)
+})
+
+Then('Verify the todo item {string} to be displayed as not-completed', (item) => {
+    todoItemObjects.verifyStatusOfTodoItemAsNotCompleted(item, status)
+})
+
 
 Then('I click on view All todo entries', () => {
     todoObjects.viewAllTodos()

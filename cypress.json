@@ -1,6 +1,5 @@
 {
   "projectId": "j5qpgn",
-  "baseUrl": "https://todomvc.com/examples/react/#/",
   "waitForAnimations": true,
   "videosFolder": "results/videos/",
   "video": true,
@@ -12,7 +11,7 @@
   "chromeWebSecurity": false,
   "watchForFileChanges": true,
   "trashAssetsBeforeRuns": false,
-  "testFiles": "**/*.feature",
+  "testFiles": ["**/*.feature","**/*.spec.js"],
   "reporter": "cypress-multi-reporters",
   "reporterOptions": {
     "configFile": "cypress/config/reporter-config.json"
