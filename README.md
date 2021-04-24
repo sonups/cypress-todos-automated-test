@@ -11,11 +11,25 @@
    Cypress test automation using docker and Jenkins. Run all your UI End to end tests silently 
 </p>
 
-**Table of contents**
+Table of contents
+=================
 
-[TOCM]
+<!--ts-->
 
-[TOC]
+  * [Built With](#built-with)
+  * [Different ways of Building And Executing project](#different-ways-of-building--executing-project)
+  	* [Running tests in local](#1-running-tests-in-local)
+  	 	* [1. Clone the repo and Install npm dependencies](#1-clone-the-repo-and-install-npm-dependencies)
+         * [2. Verify Lint](#2-verify-lint)
+         * [3. Various Test configurations](#3-various-test-configurations)
+         * [4. Structure of BDD feature files](#4-structure-of-bdd-feature-files)
+         * [5. Report Generation:-](#5-report-generation--)
+  	* [Running tests in docker](#2-running-tests-from-docker)
+  	* [Running tests in Jenkins hosted from docker](#3-running-tests-in-jenkins-hosted-from-docker)
+  	* [Running tests from Azure cloud](#4-running-tests-from-azure-cloud)
+- [Contact](#contact)
+
+
 ### Built With
 
 Npm, nodejs & docker required for running the tests. Thse tools needs to be installed in host machine prior to building the project
@@ -23,23 +37,24 @@ Npm, nodejs & docker required for running the tests. Thse tools needs to be inst
 * [Npm](https://www.npmjs.com/)
 * [NodeJs](https://nodejs.org/en/)
 
-#Different ways of Building & Executing project
-<!-- SETTING PROJECT LOCALLY -->
-##1. Local build and execution
+### Different ways of Building & Executing project
 
-1. Clone the repo & Install npm dependencies
+<!-- SETTING PROJECT LOCALLY -->
+## 1. Running tests in local
+
+##### 1. Clone the repo and Install npm dependencies
    ```sh
    git clone https://github.com/sonups/cypress-todos-automated-test
    cd cypress-todos-automated-test
    npm install
    ```
-2. There are many npm scripts available to executed from commandline
 
-###Lint check:-
+##### 2. Verify Lint
    ```sh
 npm run lint
    ```
- ###Various Test configurations:-
+   
+ ##### 3. Various Test configurations
  
    | Command  | Description | 
 | ------------- | ------------- |
@@ -51,74 +66,93 @@ npm run lint
 | npm run cucumber-run-specific-test -- -e TAGS=@rest-tests| Run All REST service test |
 | npm run cucumber-run-specific-test -- -e TAGS=@ui-rest-integrated-test | Run UI test driver from REST API  |
 
- ###Structure of BDD feature files
+ ##### 4. Structure of BDD feature files
     
     ├── cypress                    
     │         └── integration          
     │                   └──examples                  #  Spec file used for test script development
     │                   └── features                # BDD features folder
-     |                            └──── todos-ui-tests.feature       # Todos UI tests
-     |                            └──── jsonplaceholder-rest-api-tests.feature # REST API tests
-     |                            └──── todos-jsonplaceholder-integrated-tests.feature # Todos and REST api integrated test
+    |                            └──── todos-ui-tests.feature       # Todos UI tests
+    |                            └──── jsonplaceholder-rest-api-tests.feature # REST API tests
+    |                            └──── todos-jsonplaceholder-integrated-tests.feature # Todos and REST api integrated test
 
 
 
 
-  ###Report Generation:-
+  ##### 5. Report Generation:-
 
 a) allure
+
 b) mocha-awesome
 
 
-   | Command  | Description | Remarks| 
-| ------------- | ------------- | |
-| **npm run test-run-allure-report** | Generate Allure report  | Report opens automatically in a browser [ html generated in **/allure-report** ]
-| **npm run test-mochawesomereport** | Generate mochaawesome report  | html generated in **/mochawesome-report **
+
+| Command                            | Description                  | Remarks                                                                          |
+| ------------- |:-------------:| -----:|
+| **npm run test-run-allure-report** | Generate Allure report       | Report opens automatically in a browser [ html generated in **/allure-report** ] |
+| **npm run test-mochawesomereport** | Generate mochaawesome report | html generated in **/mochawesome-report **                                       |
 
 
 
 
    
 <!-- EXECUTING TEST FROM DOCKERIZED TESTS -->
-## 2. Dockerized build and execution
+## 2. Running tests from docker
 
 1. Clone the repo & run docker build
-   ```
-   git clone https://github.com/sonups/cypress-todos-automated-test
+   ```sh
    cd cypress-todos-automated-test
    docker build -t sps89/cypress-todos-automated-tests .
    ```
 2. (Optional) Ensure the existing running containers are killed and removed  - **(ignore errors)**
-   ```
+   ```sh
 	docker kill cypress-todos-automated-tests
 	docker rm cypress-todos-automated-tests
    ```
 3. Execute All tests
-   ```
+   ```sh
 	docker run --interactive --name cypress-todos-automated-tests sps89/cypress-todo-automated-tests
    ```
 
 <!-- Execution from Jenkins hosted from docker container -->
-## 3. Execution from Jenkins hosted from docker container
+## 3. Running tests in Jenkins hosted from docker
+### 3.1 Setting up jenkins
+#### OPTION-1 Running shell script jenkins-run.sh
 
-1. Clone the repo & run docker build (for building jenkins images)
+Execute the shell script in Linux environment
+   ```sh
+   cd cypress-todos-automated-test
+   cd script
+   sh jenkins-run.sh
    ```
-   git clone https://github.com/sonups/cypress-todos-automated-test
+
+#### OPTION-2 Executing each commands in shell 
+##### 
+1. Clone the repo & run docker build (for building jenkins images)
+
+   ```sh
    cd cypress-todos-automated-test
    cd jenkins
    docker build -t sps89/jenkins-gelato .
-      ```
+   ```
+##### 
 2. (Optional) Ensure the existing running containers are killed and removed  - **(ignore errors)**
-      ```
+   ```sh
    docker kill jenkins-gelato
    docker rm jenkins-gelato 
-         ```
-3. Start Jenkins service using docker
-      ```
-   docker run -d --shm-size=2048m --name jenkins-gelato -v /var/run/docker.sock:/var/run/docker.sock -p 8089:8080 -p 50000:50000 sps89/jenkins-gelato
    ```
 
-2. Open the Jenkins dashboard using link http://localhost:8089   (**may be have to wait for 1-2 minutes for the docker container to spin up )**
+
+##### 
+
+3. Start Jenkins service using docker
+   ```sh
+	docker run -d --shm-size=2048m --name jenkins-gelato -v /var/run/docker.sock:/var/run/docker.sock -p 8089:8080 -p 50000:50000 sps89/jenkins-gelato  
+
+   ```
+### 3.2 Running tests in jenkins
+
+Open the Jenkins dashboard using link http://localhost:8089   (**may be have to wait for 1-2 minutes for the docker container to spin up )**
 
 <p align="center">
    <img src="https://raw.githubusercontent.com/sonups/cypress-todos-automated-test/master/pictures/jenkins.png" alt="Logo" width="600" height="200">
@@ -138,7 +172,7 @@ There are 2 jobs to be executed here:
    </p>
 
 <!-- EXECUTING THE TESTS IN AZURE CLOUD -->
-## 4. Executing the tests in Azure Cloud
+## 4. Running tests from Azure cloud
 
 
 <!-- CONTACT -->
