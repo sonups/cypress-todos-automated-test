@@ -23,7 +23,7 @@ Table of contents
          * [2. Verify Lint](#2-verify-lint)
          * [3. Various Test configurations](#3-various-test-configurations)
          * [4. Structure of BDD feature files](#4-structure-of-bdd-feature-files)
-         * [5. Report Generation:-](#5-report-generation--)
+         * [5. Report Generation:-](#5-report-generation)
   	* [Running tests in docker](#2-running-tests-from-docker)
   	* [Running tests in Jenkins hosted from docker](#3-running-tests-in-jenkins-hosted-from-docker)
   	* [Running tests from Azure cloud](#4-running-tests-from-azure-cloud)
@@ -79,7 +79,7 @@ npm run lint
 
 
 
-  ##### 5. Report Generation:-
+  ##### 5. Report Generation
 
 a) allure
 
