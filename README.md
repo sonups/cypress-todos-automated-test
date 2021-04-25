@@ -32,7 +32,7 @@ Table of contents
   	* [3. Running tests in Jenkins hosted from docker](#3-running-tests-in-jenkins-hosted-from-docker)
   		* [3.1 Setting up jenkins](#31-setting-up-jenkins)
   	  		* [OPTION A - Running shell script jenkins-run.sh (In linux)](#------option-a----running-shell-script-jenkins-runsh-in-linux)
-  	  	 * [OPTION B - Executing each commands in shell](#------option-b----executing-each-commands-in-shell)
+  	  	 	* [OPTION B - Executing each commands in shell](#------option-b----executing-each-commands-in-shell)
          * [3.2 Running tests in jenkins](#2-running-tests-in-jenkins)
   	* [Running tests from Azure cloud](#4-running-tests-from-azure-cloud)
 - [Contact](#contact)
