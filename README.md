@@ -102,17 +102,17 @@ b) mocha-awesome
 <!-- EXECUTING TEST FROM DOCKERIZED TESTS -->
 ## 2. Running tests from docker
 
-#####1. Clone the repo & run docker build
+##### 1. Clone the repo & run docker build
    ```sh
    cd cypress-todos-automated-test
    docker build -t sps89/cypress-todos-automated-tests .
    ```
-#####2. (Required only when there is already a container running with same name) Ensures the existing running containers are killed and removed  - **(ignore errors)**
+##### 2. (Required only when there is already a container running with same name) Ensures the existing running containers are killed and removed  - **(ignore errors)**
    ```sh
 	docker kill cypress-todos-automated-tests
 	docker rm cypress-todos-automated-tests
    ```
-#####3. Execute tests by passing specific tags
+##### 3. Execute tests by passing specific tags
 
 | Description                            | Command                  |
 | ------------- |:-------------:| 
