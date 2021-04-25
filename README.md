@@ -113,7 +113,7 @@ Issue the build commands from Root Folder **cypress-todos-automated-test**
    cd cypress-todos-automated-test
    docker build -t sps89/cypress-todos-automated-tests .
    ```
-##### 2. (Required only when there is already a container running with same name) Ensures the existing running containers are killed and removed  - **(ignore errors)**
+##### 2. (Optional) Remove existing running containers (Required when there is already a container running with same name) **
    ```sh
 	docker kill cypress-todos-automated-tests
 	docker rm cypress-todos-automated-tests
@@ -122,9 +122,9 @@ Issue the build commands from Root Folder **cypress-todos-automated-test**
 
 | Description                            | Command                  |
 | ------------- |:-------------:| 
-| Execute UI tests of **todos.mvc.com** | **docker run -i -e "TAGS=-e TAGS="@ui-tests"" --name cypress-todos-automated-tests sps89/cypress-todos-automated-tests**      | 
-| Execute REST endpoint tests of **jsonplaceholder.com** | **docker run -i -e "TAGS=-e TAGS="@rest-tests"" --name cypress-todos-automated-tests sps89/cypress-todos-automated-tests**      | 
-| Execute **Integrated** UI & REST tests | **docker run -i -e "TAGS=-e TAGS="@ui-rest-integrated-test"" --name cypress-todos-automated-tests sps89/cypress-todos-automated-tests**   |
+| Execute UI tests of **todos.mvc.com** | **docker run -rm -i -e "TAGS=-e TAGS="@ui-tests"" --name cypress-todos-automated-tests sps89/cypress-todos-automated-tests**      | 
+| Execute REST endpoint tests of **jsonplaceholder.com** | **docker run -rm -i -e "TAGS=-e TAGS="@rest-tests"" --name cypress-todos-automated-tests sps89/cypress-todos-automated-tests**      | 
+| Execute **Integrated** UI & REST tests | **docker run -rm -i -e "TAGS=-e TAGS="@ui-rest-integrated-test"" --name cypress-todos-automated-tests sps89/cypress-todos-automated-tests**   |
 
 
 <!-- Execution from Jenkins hosted from docker container -->
