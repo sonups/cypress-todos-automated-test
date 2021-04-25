@@ -26,15 +26,14 @@ Table of contents
          * [4. Structure of BDD feature files](#4-structure-of-bdd-feature-files)
          * [5. Report Generation](#5-report-generation)
   	* [Running tests in docker](#2-running-tests-from-docker)
-  		* [1. Run docker build](#1-clone-the-repo--run-docker-build)
-         * [2. (Optional) Remove existing running containers](#2-required-only-when-there-is-already-a-container-running-with-same-name-ensures-the-existing-running-containers-are-killed-and-removed----ignore-errors)
+  		* [1. Run docker build](#1-run-docker-build)
+         * [2. (Optional) Remove existing running containers](2-optional-remove-existing-running-containers-required-when-there-is-already-a-container-running-with-same-name)
          * [3. Execute tests by passing specific tags](#3-execute-tests-by-passing-specific-tags)
   	* [3. Running tests in Jenkins hosted from docker](#3-running-tests-in-jenkins-hosted-from-docker)
   	 * [3.1 Setting up jenkins](#31-setting-up-jenkins)
-  	 	* [OPTION A - Running shell script jenkins-run.sh (In linux)](#31-setting-up-jenkins)
-  	 	* [OPTION B - Executing each commands in shell](#31-setting-up-jenkins)
-         * [3.2 Running tests in jenkins](#2-verify-lint)
-         * [2. Verify Lint](#2-verify-lint)
+  	 	* [OPTION A - Running shell script jenkins-run.sh (In linux)](#------option-a----running-shell-script-jenkins-runsh-in-linux)
+  	 	* [OPTION B - Executing each commands in shell](#------option-b----executing-each-commands-in-shell)
+         * [3.2 Running tests in jenkins](#2-running-tests-in-jenkins)
   	* [Running tests from Azure cloud](#4-running-tests-from-azure-cloud)
 - [Contact](#contact)
 
@@ -113,7 +112,7 @@ Issue the build commands from Root Folder **cypress-todos-automated-test**
    cd cypress-todos-automated-test
    docker build -t sps89/cypress-todos-automated-tests .
    ```
-##### 2. (Optional) Remove existing running containers (Required when there is already a container running with same name) **
+##### 2. (Optional) Remove existing running containers (Required when there is already a container running with same name)
    ```sh
 	docker kill cypress-todos-automated-tests
 	docker rm cypress-todos-automated-tests
