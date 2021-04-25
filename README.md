@@ -196,7 +196,10 @@ The job **Build_cypress_tests_docker_image** builds the docker image required to
    </p>
 
 <!-- EXECUTING THE TESTS IN AZURE CLOUD -->
-## 4. Running tests from Azure cloud
+## 4. Running tests in Jenkins hosted in Azure cloud VM
+
+Open the URL http://40.80.88.6/
+All jobs same as Jenkins setup using docker in local
 
 
 <!-- CONTACT -->
