@@ -1,8 +1,10 @@
 {
-  "name": "cypress-sampletest",
+  "name": "cypress-todos-test-automation",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "author": "Sonu Sadasivan",
+  "license": "Personal Use",
   "scripts": {
     "cucumber": "node_modules/.bin/cypress-tags run -r mochawesome",
     "cucumber-run-specific": "node_modules/.bin/cypress-tags run -e TAGS=\"@specific\"",
@@ -28,41 +30,17 @@
     "cy-run-chrome": "cypress run --browser chrome",
     "cy-run-firefox": "cypress run --browser firefox"
   },
-  "author": "Sonu Sadasivan",
-  "license": "Personal Use",
   "dependencies": {
-    "@bahmutov/print-env": "1.2.0",
-    "@types/lodash": "^4.14.168",
-    "@typescript-eslint/eslint-plugin": "^2.24.0",
-    "@typescript-eslint/parser": "^2.24.0",
-    "allure-commandline": "^2.0.0",
-    "colon-names": "1.0.0",
-    "cucumber-html-reporter": "^5.2.0",
-    "cypress": "^6.6.0",
-    "cypress-cucumber-preprocessor": "^4.0.1",
+    "eslint": "^7.25.0",
+    "cypress-cucumber-preprocessor": "^4.1.0",
     "cypress-image-snapshot": "^4.0.1",
-    "cypress-tags": "0.0.20",
     "cypress-visual-regression": "^1.5.7",
-    "cypress-xpath": "^1.3.0",
-    "eslint-plugin-cypress-dev": "2.1.0",
-    "eslint-plugin-mocha": "5.3.0",
-    "eslint-plugin-vue": "^6.2.2",
-    "mocha-allure-reporter": "^1.4.0",
-    "mocha-gherkin": "^0.2.0",
-    "mochawesome-merge": "^4.2.0",
-    "mochawesome-report-generator": "^4.1.0",
-    "multiple-cucumber-html-reporter": "^1.16.2",
-    "npm-run-all": "^4.1.2",
-    "serve": "^11.3.2",
-    "start-server-and-test": "1.10.6",
-    "typescript": "3.7.4",
-    "yaml-lint": "1.2.4"
+    "cypress-xpath": "^1.6.2"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "npm run warn-only && npm run lint:yaml",
-      "pre-push": "npm run stop-only && npm run lint:yaml"
-    }
+  "devDependencies": {
+    "cypress": "^7.1.0",
+    "cypress-multi-reporters": "^1.5.0",
+    "mochawesome": "^6.2.2"
   },
   "cypress-cucumber-preprocessor": {
     "nonGlobalStepDefinitions": false,
@@ -73,17 +51,5 @@
       "filePrefix": "",
       "fileSuffix": ".cucumber"
     }
-  },
-  "devDependencies": {
-    "cypress-multi-reporters": "^1.4.0",
-    "eslint": "^7.24.0",
-    "eslint-config-google": "^0.14.0",
-    "eslint-plugin-chai-friendly": "^0.6.0",
-    "eslint-plugin-cypress": "^2.11.2",
-    "loadash": "^1.0.0",
-    "lodash": "^4.17.21",
-    "mocha": "^8.3.2",
-    "mochawesome": "^6.2.2",
-    "underscore": "^1.12.0"
   }
 }

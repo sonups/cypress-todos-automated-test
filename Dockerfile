@@ -4,7 +4,7 @@ RUN mkdir /app
 WORKDIR /app
 COPY . /app
 #RUN npm install --save-dev cypress
-RUN npm install
+RUN npm install --no-progress
 #RUN $(npm bin)/cypress verify
 #CMD ["/bin/sh", "entrypoint.sh"]
 #CMD npm run lint -- -e="$ENVIRONMENT" -t="$TESTS"
