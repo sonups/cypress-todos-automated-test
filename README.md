@@ -174,9 +174,11 @@ Open the Jenkins dashboard using link http://localhost:8089   (**may be have to 
 
 There are 4 jobs to be executed here:
 
-First job --  **Build_cypress_tests_docker_image** build the image for running tests
+First job **Build_cypress_tests_docker_image** builds the image for running tests
 
 **Benefits** - Any repo change will be cloned and build in a single click
+
+To run tests: 
 
 | Jenkins Job                            | Description                  |
 | ------------- |:-------------:|
