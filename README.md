@@ -17,15 +17,15 @@ Table of contents
 <!--ts-->
 
   * [Built With](#built-with)
+  * [Clone the repo](#1-clone-the-repo-and-install-npm-dependencies)
   * [Different ways of Building And Executing project](#different-ways-of-building--executing-project)
   	* [Running tests in local](#1-running-tests-in-local)
-  	 	* [1. Clone the repo and Install npm dependencies](#1-clone-the-repo-and-install-npm-dependencies)
          * [2. Verify Lint](#2-verify-lint)
          * [3. Various Test configurations](#3-various-test-configurations)
          * [4. Structure of BDD feature files](#4-structure-of-bdd-feature-files)
          * [5. Report Generation](#5-report-generation)
   	* [Running tests in docker](#2-running-tests-from-docker)
-  		* [1. Clone the repo & run docker build](#1-clone-the-repo--run-docker-build)
+  		* [1. Run docker build](#1-clone-the-repo--run-docker-build)
          * [2. (Optional) Remove existing running containers](#2-required-only-when-there-is-already-a-container-running-with-same-name-ensures-the-existing-running-containers-are-killed-and-removed----ignore-errors)
          * [3. Execute tests by passing specific tags](#3-execute-tests-by-passing-specific-tags)
   	* [3. Running tests in Jenkins hosted from docker](#3-running-tests-in-jenkins-hosted-from-docker)
@@ -104,7 +104,10 @@ b) mocha-awesome
 <!-- EXECUTING TEST FROM DOCKERIZED TESTS -->
 ## 2. Running tests from docker
 
-##### 1. Clone the repo & run docker build
+##### 1. Run docker build
+
+Issue the build commands from Root Folder **cypress-todos-automated-test**
+
    ```sh
    cd cypress-todos-automated-test
    docker build -t sps89/cypress-todos-automated-tests .
@@ -126,7 +129,7 @@ b) mocha-awesome
 <!-- Execution from Jenkins hosted from docker container -->
 ## 3. Running tests in Jenkins hosted from docker
 ### 3.1 Setting up jenkins
-#### OPTION A Running shell script jenkins-run.sh (In linux)
+#### - OPTION A Running shell script jenkins-run.sh (In linux)
 
 Execute the shell script in Linux environment
    ```sh
