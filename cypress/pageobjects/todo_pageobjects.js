@@ -7,22 +7,6 @@ const viewActiveTodos = 'a[href=\'#/active\']';
 const viewCompletedTodos = 'a[href=\'#/completed\']';
 const clearCompletedLink = 'button.clear-completed';
 
-// cy.request('http://localhost:3000/todos/')
-// .then((resp) => {
-//     let counter = 1
-//     let responseBody = resp.body
-//     responseBody.length = 30
-//     cy.wrap(responseBody).each((item) => {
-//         let id = item.id
-//         let title = item.title
-//         let userId = item.userId
-//         let completedStatus = item.completed
-//         todoObjects.addNewToDoEntry(title)
-//         cy.log("todo item number = " + counter++)
-
-
-//     });
-
 export const todoObjects = {
   addMultipleTodosFromRESTService(number) {
     cy.request(testdata.jsonplaceholder_url + '/todos/')

@@ -1,5 +1,3 @@
-//import {selectDropdownValue, verifydescendingOrderOfMovieRating} from '../utils/helper';
-
 
 const listItem = 'ul.todo-list>li';
 const destroyButton = 'button.destroy';
