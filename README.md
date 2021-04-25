@@ -34,7 +34,7 @@ Table of contents
   	  		* [OPTION A - Running shell script jenkins-run.sh (In linux)](#------option-a----running-shell-script-jenkins-runsh-in-linux)
   	  	 	* [OPTION B - Executing each commands in shell](#------option-b----executing-each-commands-in-shell)
          * [3.2 Running tests in jenkins](#32-running-tests-in-jenkins)
-  	* [Running tests from Azure cloud](#4-running-tests-from-azure-cloud)
+  	* [Running tests in Jenkins hosted in Azure cloud vm](#4-running-tests-in-jenkins-hosted-in-azure-cloud-vm)
 - [Contact](#contact)
 
 
