@@ -1,4 +1,4 @@
-Feature: Test to verify the expose REST API endpoints from jsonplaceholder.typicode.com
+Feature: Tests to verify the exposed REST API endpoints from jsonplaceholder.typicode.com
 
     # pointing the jsonplaceholder application to http://localhost:3000 due to service unavailability .
     # This is achived by running the jsonplaceholder app from docker
