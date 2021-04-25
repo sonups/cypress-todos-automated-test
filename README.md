@@ -90,10 +90,7 @@ b) mocha-awesome
 | Command                            | Description                  | Remarks                                                                          |
 | ------------- |:-------------:| -----:|
 | **npm run test-run-allure-report** | Generate Allure report       | Report opens automatically in a browser [ html generated in **/allure-report** ] |
-| **npm run test-mochawesomereport** | Generate mochaawesome report | html generated in **/mochawesome-report **                                       |
-
-
-
+| **npm run test-mochawesomereport** | Generate mochaawesome report | html generated in **/mochawesome-report**                              |
 
    
 <!-- EXECUTING TEST FROM DOCKERIZED TESTS -->
