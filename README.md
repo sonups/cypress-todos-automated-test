@@ -23,7 +23,7 @@ Table of contents
          * [2. Verify Lint](#2-verify-lint)
          * [3. Various Test configurations](#3-various-test-configurations)
          * [4. Structure of BDD feature files](#4-structure-of-bdd-feature-files)
-         * [5. Report Generation:-](#5-report-generation--)
+         * [5. Report Generation](#5-report-generation)
   	* [Running tests in docker](#2-running-tests-from-docker)
   	* [Running tests in Jenkins hosted from docker](#3-running-tests-in-jenkins-hosted-from-docker)
   	* [Running tests from Azure cloud](#4-running-tests-from-azure-cloud)
@@ -79,7 +79,7 @@ npm run lint
 
 
 
-  ##### 5. Report Generation:-
+  ##### 5. Report Generation
 
 a) allure
 
@@ -104,7 +104,7 @@ b) mocha-awesome
    cd cypress-todos-automated-test
    docker build -t sps89/cypress-todos-automated-tests .
    ```
-2. (Required only when there is already a container running with same name) Ensure the existing running containers are killed and removed  - **(ignore errors)**
+2. (Required only when there is already a container running with same name) Ensures the existing running containers are killed and removed  - **(ignore errors)**
    ```sh
 	docker kill cypress-todos-automated-tests
 	docker rm cypress-todos-automated-tests
@@ -136,7 +136,7 @@ Execute the shell script in Linux environment
    docker build -t sps89/jenkins-gelato .
    ```
 ##### 
-2. (Required only when there is already a container running with same name) This ensure the existing running containers are killed and removed  - **(ignore errors)**
+2. (Required only when there is already a container running with same name) This ensures the existing running containers are killed and removed  - **(ignore errors)**
    ```sh
    docker kill jenkins-gelato
    docker rm jenkins-gelato 
