@@ -28,7 +28,7 @@
                 script {
                     try {
                         sh &apos;&apos;&apos;
-                    docker build -t sps89/jenkins-gelato .&apos;&apos;&apos;
+                    docker build -t sps89/cypress-todos-automated-tests .&apos;&apos;&apos;
                         } catch (err) {
                         echo err.getMessage()
                     }
