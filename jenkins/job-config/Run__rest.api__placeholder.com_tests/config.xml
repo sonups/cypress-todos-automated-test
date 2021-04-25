@@ -21,7 +21,7 @@
         script {
           try {
             sh &apos;&apos;&apos;
-                    docker kill cypress-todos-automated-testso&apos;&apos;&apos;
+                    docker kill cypress-todos-automated-tests&apos;&apos;&apos;
                         } catch (err) {
             echo err.getMessage()
           }
@@ -57,7 +57,7 @@
       steps {
         script {
           sh &apos;&apos;&apos;
-          docker run --interactive --name cypress-todos-automated-tests sps89/cypress-todos-automated-tests
+          docker run -i -e "TAGS=-e TAGS="@rest-tests"" --name cypress-todos-automated-tests sps89/cypress-todos-automated-tests
           &apos;&apos;&apos;
         }
       }
