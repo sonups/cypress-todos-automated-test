@@ -130,6 +130,7 @@ Issue the build commands from Root Folder **cypress-todos-automated-test**
 <!-- Execution from Jenkins hosted from docker container -->
 ## 3. Running tests in Jenkins hosted from docker
 ### 3.1 Setting up jenkins
+To setup jenkins using docker there are 2 options
 #### -----> *OPTION A* -- Running shell script jenkins-run.sh (In linux)
 
 Execute the shell script in Linux environment
