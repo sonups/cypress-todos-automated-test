@@ -6,7 +6,11 @@
   "scripts": {
     "cucumber": "node_modules/.bin/cypress-tags run -r mochawesome",
     "cucumber-run-specific": "node_modules/.bin/cypress-tags run -e TAGS=\"@specific\"",
-    "cucumber-run-specific-test": "node_modules/.bin/cypress-tags run",
+    "cucumber-run-specific2": "node_modules/.bin/cypress-tags run -e TAGS=\"@rest-tests\"",
+    "cucumber-run-specific3": "node_modules/.bin/cypress-tags run -e",
+    "cucumber-run-specific4": "node_modules/.bin/cypress-tags run",
+    "cucumber-run-specific5": "node_modules/.bin/cypress-tags run -e TAGS=",
+    "test2": "NODE_ENV=production karma start",
     "build": "npm run lint",
     "start": "serve --listen ${PORT:-8080}",
     "types": "tsc --noEmit",

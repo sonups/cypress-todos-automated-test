@@ -6,14 +6,14 @@ let testdata = {};
 describe('Drive todos UI automation tests with data from JsonPlaceholder.com', () => {
     before(function () {
         cy.fixture('testdata').then(function (data) {
-          testdata.jsonplaceholder_url = data.jsonplaceholder_url;
+            testdata.jsonplaceholder_url = data.jsonplaceholder_url;
         })
-      })
+    })
 
-      
+
     it('automated test', () => {
         cy.visit("https://todomvc.com/examples/react/#/")
-        cy.request(testdata.jsonplaceholder_url+'/todos/')
+        cy.request(testdata.jsonplaceholder_url + '/todos/')
             .then((resp) => {
                 let counter = 1
                 let responseBody = resp.body
