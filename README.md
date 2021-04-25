@@ -138,6 +138,8 @@ Execute the shell script in Linux environment
    cd scripts
    sh jenkins-run.sh
    ```
+   
+   If everything goes well please navigate to **http://localhost:8089**  to launch jenkins dashboard
 
 #### -----> *OPTION B* -- Executing each commands in shell 
 ##### 
