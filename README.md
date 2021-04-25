@@ -110,9 +110,13 @@ b) mocha-awesome
 	docker rm cypress-todos-automated-tests
    ```
 3. Execute All tests
-   ```sh
-	docker run --interactive --name cypress-todos-automated-tests sps89/cypress-todos-automated-tests
-   ```
+
+| Description                            | Command                  |
+| ------------- |:-------------:| 
+| **Execute UI tests of todos.mvc.com** | docker run -i -e "TAGS=-e TAGS="@ui-tests"" --name cypress-todos-automated-tests sps89/cypress-todos-automated-tests      | 
+| **Execute REST endpoint tests of jsonplaceholder.com** | docker run -i -e "TAGS=-e TAGS="@rest-tests"" --name cypress-todos-automated-tests sps89/cypress-todos-automated-tests  |
+| **Execute Integrated UI & REST tests ** | docker run -i -e "TAGS=-e TAGS="@ui-rest-integrated-test"" --name cypress-todos-automated-tests sps89/cypress-todos-automated-tests   |
+
 
 <!-- Execution from Jenkins hosted from docker container -->
 ## 3. Running tests in Jenkins hosted from docker
