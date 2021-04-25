@@ -26,7 +26,7 @@ Table of contents
          * [4. Structure of BDD feature files](#4-structure-of-bdd-feature-files)
          * [5. Report Generation](#5-report-generation)
   	* [Running tests in docker](#2-running-tests-from-docker)
-  	 * [1. Run docker build](#1-clone-the-repo--run-docker-build)
+  		* [1. Run docker build](#1-clone-the-repo--run-docker-build)
          * [2. (Optional) Remove existing running containers](#2-required-only-when-there-is-already-a-container-running-with-same-name-ensures-the-existing-running-containers-are-killed-and-removed----ignore-errors)
          * [3. Execute tests by passing specific tags](#3-execute-tests-by-passing-specific-tags)
   	* [3. Running tests in Jenkins hosted from docker](#3-running-tests-in-jenkins-hosted-from-docker)
