@@ -1,4 +1,4 @@
-//import {selectDropdownValue, verifydescendingOrderOfMovieRating} from '../utils/helper';
+import { todoItemObjects } from '../pageobjects/todo_entry_item_pageobjects'
 const addNewToDoInputText = 'input.new-todo';
 const markAllAsCompleted = 'label[for=\'toggle-all\']';
 const toDoCount = 'span.todo-count';
