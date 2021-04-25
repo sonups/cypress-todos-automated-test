@@ -200,6 +200,7 @@ The job **Build_cypress_tests_docker_image** builds the docker image required to
 
 Open the URL http://40.80.88.6/
 All jobs same as Jenkins setup using docker in local
+Password provided separately
 
 
 <!-- CONTACT -->
