@@ -135,7 +135,7 @@ Issue the build commands from Root Folder **cypress-todos-automated-test**
 Execute the shell script in Linux environment
    ```sh
    cd cypress-todos-automated-test
-   cd script
+   cd scripts
    sh jenkins-run.sh
    ```
 
