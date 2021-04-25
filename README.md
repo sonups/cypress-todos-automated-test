@@ -114,8 +114,8 @@ b) mocha-awesome
 | Description                            | Command                  |
 | ------------- |:-------------:| 
 | **Execute UI tests of todos.mvc.com** | docker run -i -e "TAGS=-e TAGS="@ui-tests"" --name cypress-todos-automated-tests sps89/cypress-todos-automated-tests      | 
-| **Execute REST endpoint tests of jsonplaceholder.com** | docker run -i -e "TAGS=-e TAGS="@rest-tests"" --name cypress-todos-automated-tests sps89/cypress-todos-automated-tests  |
-| **Execute Integrated UI & REST tests ** | docker run -i -e "TAGS=-e TAGS="@ui-rest-integrated-test"" --name cypress-todos-automated-tests sps89/cypress-todos-automated-tests   |
+| **Execute REST endpoint tests of jsonplaceholder.com** | docker run -i -e "TAGS=-e TAGS="@rest-tests"" --name cypress-todos-automated-tests sps89/cypress-todos-automated-tests      | 
+| **Execute Integrated UI & REST tests** | docker run -i -e "TAGS=-e TAGS="@ui-rest-integrated-test"" --name cypress-todos-automated-tests sps89/cypress-todos-automated-tests   |
 
 
 <!-- Execution from Jenkins hosted from docker container -->
