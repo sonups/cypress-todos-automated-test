@@ -25,7 +25,13 @@ Table of contents
          * [4. Structure of BDD feature files](#4-structure-of-bdd-feature-files)
          * [5. Report Generation](#5-report-generation)
   	* [Running tests in docker](#2-running-tests-from-docker)
-  	* [Running tests in Jenkins hosted from docker](#3-running-tests-in-jenkins-hosted-from-docker)
+  		* [1. Clone the repo and Install npm dependencies](#1-clone-the-repo-and-install-npm-dependencies)
+         	* [2. Verify Lint](#2-verify-lint)
+         	* [2. Verify Lint](#2-verify-lint)
+  	* [Running tests in Jenkins hosted from docker container](#3-running-tests-in-jenkins-hosted-from-docker)
+  		* [1. Clone the repo and Install npm dependencies](#1-clone-the-repo-and-install-npm-dependencies)
+         	* [2. Verify Lint](#2-verify-lint)
+         	* [2. Verify Lint](#2-verify-lint)
   	* [Running tests from Azure cloud](#4-running-tests-from-azure-cloud)
 - [Contact](#contact)
 
@@ -96,17 +102,17 @@ b) mocha-awesome
 <!-- EXECUTING TEST FROM DOCKERIZED TESTS -->
 ## 2. Running tests from docker
 
-1. Clone the repo & run docker build
+#####1. Clone the repo & run docker build
    ```sh
    cd cypress-todos-automated-test
    docker build -t sps89/cypress-todos-automated-tests .
    ```
-2. (Required only when there is already a container running with same name) Ensures the existing running containers are killed and removed  - **(ignore errors)**
+#####2. (Required only when there is already a container running with same name) Ensures the existing running containers are killed and removed  - **(ignore errors)**
    ```sh
 	docker kill cypress-todos-automated-tests
 	docker rm cypress-todos-automated-tests
    ```
-3. Execute All tests
+#####3. Execute tests by passing specific tags
 
 | Description                            | Command                  |
 | ------------- |:-------------:| 
