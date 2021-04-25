@@ -20,7 +20,7 @@ Table of contents
   * [Clone the repo](#1-clone-the-repo-and-install-npm-dependencies)
   * [Different ways of Building And Executing project](#different-ways-of-building--executing-project)
   	* [Running tests in local](#1-running-tests-in-local)
-  	  * [1. Clone the repo and Install npm dependencies](#1-clone-the-repo-and-install-npm-dependencies)
+  	 	* [1. Clone the repo and Install npm dependencies](#1-clone-the-repo-and-install-npm-dependencies)
          * [2. Verify Lint](#2-verify-lint)
          * [3. Various Test configurations](#3-various-test-configurations)
          * [4. Structure of BDD feature files](#4-structure-of-bdd-feature-files)
