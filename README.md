@@ -211,6 +211,6 @@ Jenkins login credentials can be found in Email
 Sonu Sadasivan - sonu.sadasivan@gmail.com
 LinkedIn - https://www.linkedin.com/in/sonups/
 
-Project Link: [https://github.com/sonups/cypress-test-docker](https://github.com/sonups/cypress-test-docker)
+Project Link: [https://github.com/sonups/cypress-todos-automated-test](https://github.com/sonups/cypress-test-docker)
 
 
