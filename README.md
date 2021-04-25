@@ -175,9 +175,8 @@ Open the Jenkins dashboard using link http://localhost:8089   (**may be have to 
 There are 4 jobs to be executed here:
 
 First job --  **Build_cypress_tests_docker_image** build the image for running tests
+
 **Benefits** - Any repo change will be cloned and build in a single click
-
-
 
 | Jenkins Job                            | Description                  |
 | ------------- |:-------------:|
@@ -185,9 +184,6 @@ First job --  **Build_cypress_tests_docker_image** build the image for running t
 | **Run__todomvc.com__rest.api__integration__tests** | Execute **Integrated** UI & REST tests |
 | **Run__todos.mvc__tests** | Execute UI tests of **todos.mvc.com** |
 
-
-
- 
  
 <p align="center">
    <img src="https://raw.githubusercontent.com/sonups/cypress-todos-automated-test/master/pictures/jenkins-console-output.png" alt="Logo" width="600" height="200">
