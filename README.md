@@ -168,7 +168,7 @@ Execute the shell script in Linux environment
    ```
 ### 3.2 Running tests in jenkins
 
-#### Open the Jenkins dashboard using link http://localhost:8089   
+#### ----> Open the Jenkins dashboard using link http://localhost:8089   
 
 **(may be have to wait for 1-2 minutes for the docker container to spin up )**
 
@@ -177,13 +177,13 @@ Execute the shell script in Linux environment
    </p>
    
 
-#### Build the docker image required to run tests
+#### ----> Build the docker image required to run tests
 
 The job **Build_cypress_tests_docker_image** builds the docker image required to run tests
 
 **Benefits** - Any repo change will be cloned and build in a single click
 
-#### Jobs to run tests 
+#### ----> Jobs to run tests 
 
 | Jenkins Job                            | Description                  |
 | ------------- |:-------------:|
