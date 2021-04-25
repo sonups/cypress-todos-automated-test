@@ -33,7 +33,7 @@ Table of contents
   		* [3.1 Setting up jenkins](#31-setting-up-jenkins)
   	  		* [OPTION A - Running shell script jenkins-run.sh (In linux)](#------option-a----running-shell-script-jenkins-runsh-in-linux)
   	  	 	* [OPTION B - Executing each commands in shell](#------option-b----executing-each-commands-in-shell)
-         * [3.2 Executing tests in jenkins](#32-running-tests-in-jenkins)
+         * [3.2 Executing tests in jenkins](#32-executing-tests-in-jenkins)
   	* [Running tests in Jenkins hosted in Azure cloud vm](#4-running-tests-in-jenkins-hosted-in-azure-cloud-vm)
 - [Contact](#contact)
 
@@ -165,7 +165,7 @@ Execute the shell script in Linux environment
 	docker run -d --shm-size=2048m --name jenkins-gelato -v /var/run/docker.sock:/var/run/docker.sock -p 8089:8080 -p 50000:50000 sps89/jenkins-gelato  
 
    ```
-### 3.2 Running tests in jenkins
+### 3.2 Executing tests in jenkins
 
 #### ----> Open the Jenkins dashboard using link http://localhost:8089   
 
