@@ -177,13 +177,13 @@ Execute the shell script in Linux environment
    </p>
    
 
-#### Builds the docker image required to run tests
+#### Build the docker image required to run tests
 
 The job **Build_cypress_tests_docker_image** builds the docker image required to run tests
 
 **Benefits** - Any repo change will be cloned and build in a single click
 
-#### To run tests: 
+#### Jobs to run tests 
 
 | Jenkins Job                            | Description                  |
 | ------------- |:-------------:|
