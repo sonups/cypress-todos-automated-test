@@ -130,7 +130,7 @@ Issue the build commands from Root Folder **cypress-todos-automated-test**
 <!-- Execution from Jenkins hosted from docker container -->
 ## 3. Running tests in Jenkins hosted from docker
 ### 3.1 Setting up jenkins
-#### -----> *OPTION A* Running shell script jenkins-run.sh (In linux)
+#### -----> *OPTION A* -- Running shell script jenkins-run.sh (In linux)
 
 Execute the shell script in Linux environment
    ```sh
@@ -139,7 +139,7 @@ Execute the shell script in Linux environment
    sh jenkins-run.sh
    ```
 
-#### -----> *OPTION B* Executing each commands in shell 
+#### -----> *OPTION B* -- Executing each commands in shell 
 ##### 
 1. Clone the repo & run docker build (for building jenkins images)
 
@@ -172,14 +172,23 @@ Open the Jenkins dashboard using link http://localhost:8089   (**may be have to 
    </p>
    
 
-There are 2 jobs to be executed here:
+There are 4 jobs to be executed here:
 
-<span style="color:blue">To build docker tests run the job</span>.
-<span style="color:red">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;dockerize-cypress-test-automation</span>.
+First job --  **Build_cypress_tests_docker_image** build the image for running tests
+**Benefits** - Any repo change will be cloned and build in a single click
 
-<span style="color:blue">To build docker tests run the job</span>.
-<span style="color:red">&nbsp;&nbsp;&nbsp;&nbsp;run-cypress-todos-automated-tests</span>.
 
+
+| Jenkins Job                            | Description                  |
+| ------------- |:-------------:|
+| **Run__rest.api__placeholder.com_tests** | Execute REST endpoint tests of **jsonplaceholder.com**        |
+| **Run__todomvc.com__rest.api__integration__tests** | Execute **Integrated** UI & REST tests |
+| **Run__todos.mvc__tests** | Execute UI tests of **todos.mvc.com** |
+
+
+
+ 
+ 
 <p align="center">
    <img src="https://raw.githubusercontent.com/sonups/cypress-todos-automated-test/master/pictures/jenkins-console-output.png" alt="Logo" width="600" height="200">
    </p>
