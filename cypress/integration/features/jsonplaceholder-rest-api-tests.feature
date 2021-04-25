@@ -12,7 +12,7 @@ Feature: Test to verify the expose REST API endpoints from jsonplaceholder.typic
     #GET http method
     @read-rest-api @dev @rest-tests
     Scenario: Get a todo item using GET http method
-    When Using REST service I get a todo ITEM - GET method
+        When Using REST service I get a todo ITEM - GET method
 
     #POST http method
     @create-rest-api @dev @rest-tests
@@ -22,5 +22,5 @@ Feature: Test to verify the expose REST API endpoints from jsonplaceholder.typic
     #DELETE http method
     @delete-rest-api @dev @rest-tests
     Scenario: Delete an todo item on /todos endpoint using DELETE http method
-    When Using REST service I delete a todo ITEM - DELETE method
+        When Using REST service I delete a todo ITEM - DELETE method
 

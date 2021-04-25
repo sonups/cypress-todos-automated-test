@@ -43,7 +43,7 @@ export const todoObjects = {
       })
   },
   changeTodoStatusOfMUltipleItemsBasedonValuesFromREST(number) {
-    cy.request(testdata.jsonplaceholder_url+'/todos/')
+    cy.request(testdata.jsonplaceholder_url + '/todos/')
       .then((resp) => {
         let counter = 1
         let responseBody = resp.body
@@ -61,7 +61,7 @@ export const todoObjects = {
       })
   },
   verifyTodoStatusOfMUltipleItemsBasedonValuesFromREST(number) {
-    cy.request(testdata.jsonplaceholder_url+'/todos/')
+    cy.request(testdata.jsonplaceholder_url + '/todos/')
       .then((resp) => {
         let counter = 1
         let responseBody = resp.body

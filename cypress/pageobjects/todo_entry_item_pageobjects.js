@@ -21,7 +21,7 @@ export const todoItemObjects = {
             cy.log($item)
             cy.log("check chek ")
 
-              cy.wrap($item).should('have.class', 'completed')
+            cy.wrap($item).should('have.class', 'completed')
 
 
           });
@@ -43,7 +43,7 @@ export const todoItemObjects = {
             cy.log($item)
             cy.log("check chek ")
 
-              cy.wrap($item).should('not.have.class', 'completed')
+            cy.wrap($item).should('not.have.class', 'completed')
 
 
           });

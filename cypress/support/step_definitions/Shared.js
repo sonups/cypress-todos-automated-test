@@ -1,6 +1,6 @@
 
 // capture snapshot
-import {When, Then} from 'cypress-cucumber-preprocessor/steps';
+import { When, Then } from 'cypress-cucumber-preprocessor/steps';
 
 Then('I capture snapshot and compare {string}', (string) => {
   cy.matchImageSnapshot(string);
@@ -11,36 +11,36 @@ Then('I capture snapshot and compare {string}', (string) => {
 */
 Then('I should see title {string}', (title) => {
   cy.title()
-      .should('include', title);
+    .should('include', title);
 });
 Then('I should see {string} text displayed', (string) => {
   cy.contains(string)
-      .invoke('show').should('be.visible');
+    .invoke('show').should('be.visible');
 });
 Then('The header should contain {string}', (string) => {
   cy.get('h1')
-      .should('contain', string);
+    .should('contain', string);
 });
 Then('The sub-header should contain {string}', (string) => {
   cy.get('h2')
-      .should('contain', string);
+    .should('contain', string);
 });
 Then('The header title should contain {string}', (string) => {
-  cy.get('.header__title').invoke('text').Then(function(text) {
+  cy.get('.header__title').invoke('text').Then(function (text) {
     expect(text).to.include(string);
   });
 });
 Then('I should not see {string}', (string) => {
-  cy.contains(string, {timeout: 0})
-      .should('not.be.visible');
+  cy.contains(string, { timeout: 0 })
+    .should('not.be.visible');
 });
 Then('I should not see text {string}', (string) => {
   cy.xpath(`//*[contains(text(),"${string}")]`)
-      .should('not.be.visible');
+    .should('not.be.visible');
 });
-Then('The current url should contain {string}', function(string) {
+Then('The current url should contain {string}', function (string) {
   cy.url()
-      .should('contain', string);
+    .should('contain', string);
 });
 
 /**
@@ -48,11 +48,11 @@ Then('The current url should contain {string}', function(string) {
  */
 When('I click on {string}', (string) => {
   cy.xpath(`//*[contains(text(),'${string}')]`)
-      .first().click();
+    .first().click();
 });
 Then('I press button {string}', (string) => {
   cy.contains(string)
-      .click();
+    .click();
 });
 
 
@@ -71,7 +71,7 @@ Then('I go back to homepage', () => {
 // window handling
 Then('I wait for appReady state', () => {
   cy.window()
-      .should('have.property', 'appReady', true);
+    .should('have.property', 'appReady', true);
 });
 
 // wait cmmds
@@ -87,7 +87,7 @@ Then('I log {string}', (string) => {
 });
 
 // check URL response status - 200
-Then('I check all URL response status should be 200', function() {
+Then('I check all URL response status should be 200', function () {
   cy.checkURLResponseStatus();
 });
 
