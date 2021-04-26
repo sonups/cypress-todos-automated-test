@@ -141,7 +141,7 @@ Execute the shell script in Linux environment
    
    If everything goes well please navigate to **http://localhost:8089**  to launch jenkins dashboard
 
-#### -----> *OPTION B* -- Executing each commands in shell 
+#### -----> *OPTION B* -- Executing each commands in shell(windows or mac) 
 ##### 
 1. Clone the repo & run docker build (for building jenkins images)
 
