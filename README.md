@@ -32,7 +32,7 @@ Table of contents
   	* [3. Running tests in Jenkins hosted from docker](#3-running-tests-in-jenkins-hosted-from-docker)
   		* [3.1 Setting up jenkins](#31-setting-up-jenkins)
   	  		* [OPTION A - Running shell script jenkins-run.sh (In linux)](#------option-a----running-shell-script-jenkins-runsh-in-linux)
-  	  	 	* [OPTION B - Executing each commands in shell(Windows or Mac)](#------option-b----executing-each-commands-in-shell-windows-or-mac)
+  	  	 	* [OPTION B - Executing each commands in shell(Windows or Mac)](#------option-b----executing-each-commands-in-shellwindows-or-mac)
          * [3.2 Executing tests in jenkins](#32-executing-tests-in-jenkins)
   	* [Running tests in Jenkins hosted in Azure cloud vm](#4-running-tests-in-jenkins-hosted-in-azure-cloud-vm)
 - [Contact](#contact)
@@ -141,7 +141,7 @@ Execute the shell script in Linux environment
    
    If everything goes well please navigate to **http://localhost:8089**  to launch jenkins dashboard
 
-#### -----> *OPTION B* -- Executing each commands in shell 
+#### -----> *OPTION B* -- Executing each commands in shell(windows or mac) 
 ##### 
 1. Clone the repo & run docker build (for building jenkins images)
 
